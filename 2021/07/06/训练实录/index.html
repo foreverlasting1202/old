@@ -1,0 +1,453 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>训练实录 | foreverlasting's blog</title><meta name="keywords" content="OI"><meta name="author" content="foreverlasting"><meta name="copyright" content="foreverlasting"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="嘤嘤嘤。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="训练实录">
+<meta property="og:url" content="http://foreverlasting1202.github.io/2021/07/06/%E8%AE%AD%E7%BB%83%E5%AE%9E%E5%BD%95/index.html">
+<meta property="og:site_name" content="foreverlasting&#39;s blog">
+<meta property="og:description" content="嘤嘤嘤。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s2.loli.net/2022/02/01/2WZRAST8qgLz6Ey.jpg">
+<meta property="article:published_time" content="2021-07-06T15:30:00.000Z">
+<meta property="article:modified_time" content="2022-02-23T14:32:58.195Z">
+<meta property="article:author" content="foreverlasting">
+<meta property="article:tag" content="OI">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2022/02/01/2WZRAST8qgLz6Ey.jpg"><link rel="shortcut icon" href="/img/1.jpg"><link rel="canonical" href="http://foreverlasting1202.github.io/2021/07/06/%E8%AE%AD%E7%BB%83%E5%AE%9E%E5%BD%95/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: 'days',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '训练实录',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: false,
+  postUpdate: '2022-02-23 22:32:58'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/cute.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">134</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">3</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">40</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> Messageboard</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/timeline/"><i class="fa-fw fa fa-bell"></i><span> Timeline</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-sitemap"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="/myself/"><i class="fa-fw fa fa-id-card"></i><span> myself</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://s2.loli.net/2022/02/01/2WZRAST8qgLz6Ey.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">foreverlasting's blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> Messageboard</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/timeline/"><i class="fa-fw fa fa-bell"></i><span> Timeline</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-sitemap"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="/myself/"><i class="fa-fw fa fa-id-card"></i><span> myself</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">训练实录</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-07-06T15:30:00.000Z" title="Created 2021-07-06 23:30:00">2021-07-06</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-02-23T14:32:58.195Z" title="Updated 2022-02-23 22:32:58">2022-02-23</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%81%9A%E9%A2%98%E8%AE%B0%E5%BD%95/">做题记录</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="训练实录"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>嘤嘤嘤。<br><span id="more"></span></p>
+<p>训练实录：[时间 名称 人数 通过题数/总题数 总结]</p>
+<ol>
+<li><p>2021.7.5 <a href="https://foreverlasting1202.github.io/2021/07/06/2020%20ICPC%20Shanghai%20Site/">2020 ICPC Shanghai Site</a> 1 7/13 </p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：读题面能力有问题，接连读错题目，要训练英语能力了。同时要提升耐力，打到最后两个小时就不想写了是什么鬼啊。</p>
+</div></div>
+</li>
+<li><p>2021.7.11 2021年“美团杯”程序设计挑战赛 2 535/1300</p>
+ <div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：上来就读错题，罚了 $11$ 发，输麻了。/ll</p>
+</div></div>
+</li>
+<li><p>2021.7.20 <a href="https://foreverlasting1202.github.io/2021/07/20/2021%E5%A4%9A%E6%A0%A11/">2021“MINIEYE杯”中国大学生算法设计超级联赛（1）</a> 3 7/11</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：我是罪人/ll 两个 $\log$ 打不过莫队，$n^2\log$ 跑不出 $500$，bsgs 用个 <code>map</code> 直接被卡常。输麻了，对不起强劲的队友/ll</p>
+</div></div>
+</li>
+<li><p>2021.7.22 <a href="https://foreverlasting1202.github.io/2021/07/22/2021%E5%A4%9A%E6%A0%A12/">2021“MINIEYE杯”中国大学生算法设计超级联赛（2）</a> 3 12/12</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：只会数据结构的屑，别带飞了/se</p>
+</div></div>
+</li>
+<li><p>2021.7.25 CF1552 1 5/9</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：前面全程梦游，最后半小时才有脑子，还就那个那个。</p>
+</div></div>
+</li>
+<li><p>2021.7.27 <a href="https://foreverlasting1202.github.io/2021/07/27/2021%E5%A4%9A%E6%A0%A13/">2021“MINIEYE杯”中国大学生算法设计超级联赛（3）</a> 3 6/12</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：题目太难，告辞。</p>
+</div></div>
+</li>
+<li><p>2021.7.29 <a href="https://foreverlasting1202.github.io/2021/07/29/2021%E5%A4%9A%E6%A0%A14/">2021“MINIEYE杯”中国大学生算法设计超级联赛（4）</a> 3 8/11</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：评测机出现了问题，但我们队不知道。中间一个半小时在疯狂卡常，后来重测发现其实早就过了。输得好惨啊！</p>
+</div></div>
+</li>
+<li><p>2021.8.1 2021 年百度之星·程序设计大赛 - 初赛二 1 5/8</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：迟到了一小时，随机搞不动，好菜啊，希望复赛能正常发挥。</p>
+</div></div>
+</li>
+<li><p>2021.8.3 <a href="https://foreverlasting1202.github.io/2021/08/03/2021%E5%A4%9A%E6%A0%A15/">2021“MINIEYE杯”中国大学生算法设计超级联赛（5）</a> 3 11/13</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：全队属我最坑，大数据结构口胡五分钟，写了两小时，纯逆天人。不过这场没啥区分度啊。</p>
+</div></div>
+</li>
+<li><p>2021.8.5 <a href="https://foreverlasting1202.github.io/2021/08/05/2021%E5%A4%9A%E6%A0%A16/">2021“MINIEYE杯”中国大学生算法设计超级联赛（6）</a> 3 5/11</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：全队没人会签到构造，而且还听说榜歪了，太难了呀。</p>
+</div></div>
+</li>
+<li><p>2021.8.10 <a href="https://foreverlasting1202.github.io/2021/08/10/2021%E5%A4%9A%E6%A0%A17/">2021“MINIEYE杯”中国大学生算法设计超级联赛（7）</a> 3 11/12</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：等我写完一道题时队友已经基本结束了所有题，躺了一整把，被神仙学弟带飞了。</p>
+</div></div>
+</li>
+<li><p>2021.8.12 <a href="https://foreverlasting1202.github.io/2021/08/12/2021%E5%A4%9A%E6%A0%A18/">2021“MINIEYE杯”中国大学生算法设计超级联赛（8）</a> 3 9/10</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：这把明显表现出对 ACM 的不适应，签到题没人写，罚时直接上天。不过应该是人生中唯一一次打赢逆十字了。</p>
+</div></div>
+</li>
+<li><p>2021.8.17 <a href="https://foreverlasting1202.github.io/2021/08/17/2021%E5%A4%9A%E6%A0%A19/">2021“MINIEYE杯”中国大学生算法设计超级联赛（9）</a> 3 6/11</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：全队梦游属于是，ljc 调不出他的题，我调不出我的题，互换一下就全过了。我居然是因为 <code>INF</code> 设小了，吐血。</p>
+</div></div>
+</li>
+<li><p>2021.8.19 <a href="https://foreverlasting1202.github.io/2021/08/19/2021%E5%A4%9A%E6%A0%A20/">2021“MINIEYE杯”中国大学生算法设计超级联赛（10）</a> 3 4/10</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：最后一场好烂属于是，也不知道为什么无敌的 ljc 不像之前那么无敌了/ll 干一道普通的字符串题一直能想歪，结束了。</p>
+</div></div>
+</li>
+<li><p>2021.8.21 2021 年百度之星·程序设计大赛 - 复赛 1 4/6</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：不会思维题，还被卡常。$84$ 名滚粗。</p>
+</div></div>
+</li>
+<li><p>2021.9.21 <a href="https://foreverlasting1202.github.io/2021/09/21/The%202020%20ICPC%20Asia%20Shenyang%20Regional%20Programming%20Contest/">The 2020 ICPC Asia Shenyang Regional Programming Contest</a> 3 8/13</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：第一次三人正式训练，表现出的问题有点多。首先是 M 题的爆 <code>int</code> 问题耗费了太长时间，而且读题有重叠，导致有效思考时间大幅度减少，问题太多了，还需好好训练。</p>
+</div></div>
+</li>
+<li><p>2021.10.3 <a href="https://foreverlasting1202.github.io/2021/10/03/2020-2021%20ICPC,%20NERC,%20Northern%20Eurasia%20Onsite/">2020-2021 ICPC, NERC, Northern Eurasia Onsite</a> 3 5/11</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：？签到玩脱了，整个就直接寄了。马上就要 CCPC 网络赛了，感觉已经没救了。要不马上退役保平安吧。</p>
+</div></div>
+</li>
+<li><p>2021.10.6 <a href="https://foreverlasting1202.github.io/2021/10/06/2020-2021%20ACM-ICPC,%20Asia%20Nanjing%20Regional%20Contest/">2020-2021 ACM-ICPC, Asia Nanjing Regional Contest</a> 3 7/13</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：这场的前期还是很好的，感觉最后决策还是有问题，而且代码不能快速写出还是大问题的捏。</p>
+</div></div>
+</li>
+<li><p>2021.10.9 <a href="https://foreverlasting1202.github.io/2021/10/09/2020-2021%20Winter%20Petrozavodsk%20Camp,%20Day%205%20Almost%20Retired%20Dandelion%20Contest/">2020-2021 Winter Petrozavodsk Camp, Day 5: Almost Retired Dandelion Contest</a> 3 6/13</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：属于是中期大脑迷糊，写个分段打表都写不对。不过运气好的是 A 写了个暴力就过了，感觉是完全不行这状态。</p>
+</div></div>
+</li>
+<li><p>2021.10.10 <a href="https://foreverlasting1202.github.io/2021/10/10/2021%E4%B8%AD%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AB%9E%E8%B5%9B%EF%BC%88CCPC%EF%BC%89-%20%E7%BD%91%E7%BB%9C%E9%80%89%E6%8B%94%E8%B5%9B%EF%BC%88%E9%87%8D%E8%B5%9B%EF%BC%89/">2021中国大学生程序设计竞赛（CCPC）- 网络选拔赛（重赛）</a> 3 5/12</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：一个队友肝了一道读错题意的题，一整场没发现。我签到调两个小时，一个队友混了一整场。考后连过两题，整乐了。真想直接退役了。</p>
+</div></div>
+</li>
+<li><p>2021.10.16 <a href="https://foreverlasting1202.github.io/2021/10/16/2020-2021%20ACM-ICPC,%20Asia%20Seoul%20Regional%20Contest/">2020-2021 ACM-ICPC, Asia Seoul Regional Contest</a> 3 10/12</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：队友和我发挥的都异常的好啊，突然起飞了。希望之后也能顺利。</p>
+</div></div>
+</li>
+<li><p>2021.10.23 <a href="https://foreverlasting1202.github.io/2021/10/23/The%202020%20ICPC%20Asia%20Macau%20Regional%20Contest/">The 2020 ICPC Asia Macau Regional Contest</a> 3 6/12</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：调不出代码是硬伤，但读错题更是硬伤，拼了老命也拉不回这一场啊。</p>
+</div></div>
+</li>
+<li><p>2021.10.30 ICPC Central Russia Regional Contest (CRRC 19) 3 9/11</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：萌萌场，写完九题才三个多小时，然后队友开始写暴搜+剪枝，可惜最后没过。不过罚时已经上天了，可惜。</p>
+</div></div>
+</li>
+<li><p>2021.11.6 <a href="https://foreverlasting1202.github.io/2021/11/13/2020-2021%20ICPC%20Southeastern%20European%20Regional%20Programming%20Contest/">2020-2021 ICPC Southeastern European Regional Programming Contest (SEERC 2020)</a> 3 7/13</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：写了三个小时的分类讨论题，好累。也幸亏没有硬跟榜，过了 A 还挺好看的。</p>
+</div></div>
+</li>
+<li><p>2021.11.7 2021 16th-BITCPC 预选赛 3 9/13</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：可能 edg 比赛燃烧了我的激情，导致这场有点摆烂。最后只有第七，前三都没有，不能接受捏。最后 K 答案忘记排序导致没时间交了，逆天。</p>
+</div></div>
+</li>
+<li><p>2021.11.12 2021年中国大学生程序设计竞赛女生专场 1 9/11</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：弄了一堆假算法，一题甚至交了十一发，这就是单挑的含金量吗，逆天。</p>
+</div></div>
+</li>
+<li><p>2021.11.18 XXII Open Cup. Grand Prix of Korea 1 4/13</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：哈哈，读入忘记开 <code>long long</code>，循环 <code>break</code> 和 <code>continue</code> 写反，H 题意读错，树 $\mathrm{hash}$ 完全写错，不知道自己在干嘛，这场连题都没咋思考，全在调代码了，逆天。</p>
+</div></div>
+</li>
+<li><p>2021.11.20 2020 ICPC Asia East Continent Final 3 5/13</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：理论还有四道题没写，但完全没时间了，主要我一直在摆烂关注联赛，哈哈。</p>
+</div></div>
+</li>
+<li><p>2021.11.23 NFLSPC #4 2(?) 1 5/12</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：明明是两人的，结果全程就我在写题，行吧。打一半还肚子痛，真气。</p>
+</div></div>
+</li>
+<li><p>2021.11.25 <a href="https://foreverlasting1202.github.io/2021/11/25/CF1603/">CF1603</a> 1 2/6</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：vp 到一半困得不行就睡了，不然大概只有三题吧，这个 C 真的不会啊。</p>
+</div></div>
+</li>
+<li><p>2021.11.26 <a href="https://foreverlasting1202.github.io/2021/11/26/CF1612/">CF1612 </a>1 5/7</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：写代码速度确实太慢，导致 G 还没调出来，好捞啊感觉。</p>
+</div></div>
+</li>
+<li><p>2021.11.26 <a href="https://foreverlasting1202.github.io/2021/11/26/CF1614/">CF1614</a> 1 4/6</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：我是呆逼我是呆逼我是呆逼。</p>
+</div></div>
+</li>
+<li><p>2021.12.1 <a href="https://foreverlasting1202.github.io/2021/12/01/CF1613/">CF1613</a> 1 4/6</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：哈哈，最后一小时才发现第二天我生日，然后就去水群了，最后两题没写，赛后看一下还蛮简单的。</p>
+</div></div>
+</li>
+<li><p>2021.12.4 <a href="https://foreverlasting1202.github.io/2021/11/13/The%202021%20ICPC%20Asia%20Shanghai%20Regional%20Programming%20Contest/">The 2021 ICPC Asia Shanghai Regional Programming Contest</a> 3 9/13</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：尽力局，最后一小时实在不想写 $O(n^26^n)$ 的轮廓线 $\mathrm{dp}$，然后就摆烂了。哈哈。</p>
+</div></div>
+</li>
+<li><p>2021.12.12 <a href="https://foreverlasting1202.github.io/2021/12/13/CF1608/">CF1608</a> 1 4/7</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：比赛降智严重，行。</p>
+</div></div>
+</li>
+<li><p>2021.12.16 <a href="https://foreverlasting1202.github.io/2021/12/17/CF1617/">CF1617</a> 1 3/6</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：D 写了个大讨论，调不出来，急坏了。</p>
+</div></div>
+</li>
+<li><p>2021.12.18 <a href="https://foreverlasting1202.github.io/2021/12/18/%E7%89%9B%E5%AE%A2%E6%8C%91%E6%88%98%E8%B5%9B55/">牛客挑战赛55</a> 1 3/6</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：太困了，写了三题就去睡觉了。</p>
+</div></div>
+</li>
+<li><p>2021.12.18 <a href="https://foreverlasting1202.github.io/2021/12/19/CF1620/">CF1620</a> 1 4/7</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：困麻了，溜了。</p>
+</div></div>
+</li>
+<li><p>2021.12.24 <a href="https://foreverlasting1202.github.io/2021/12/25/CF1615/">CF1615</a> 1 4/8</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：想不出这个 D，感觉构造还是缺了些什么思维。</p>
+</div></div>
+</li>
+<li><p>2021.12.26 <a href="https://foreverlasting1202.github.io/2021/12/26/2019-2020%20Winter%20Petrozavodsk%20Camp,%20Day%208%20Almost%20Algorithmic%20Contest/">2019-2020 Winter Petrozavodsk Camp, Day 8: Almost Algorithmic Contest</a> 2 4/12</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：队友调不出数据结构，然后就没有然后了。</p>
+</div></div>
+</li>
+<li><p>2021.12.29 The 2021 ICPC Asia Nanjing Regional Contest (XXII Open Cup, Grand Prix of Nanjing) 3 7/13</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：我上来罚时就爆炸，今天毕竟早上有课，导致神志不清了。</p>
+</div></div>
+</li>
+<li><p>2022.1.23 CF1628 1 2/7</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：？放个寒假把自己人放傻了，这都是啥啊。题面读错三遍，也不知道自己比赛在干什么了。但也好，在这么早的时间发现了自己实际摆烂很久的事实了，要重新复健了。</p>
+</div></div>
+</li>
+<li><p>2022.1.27 <a href="https://foreverlasting1202.github.io/2022/01/27/2021%20Ptz,20Summer%20Day1/">41st Petrozavodsk Summer 2021 Day 1. Kyoto U Contest 1</a> 1 6/13</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：开始复健了，恢复状态！</p>
+</div></div>
+</li>
+<li><p>2022.1.28 <a href="https://foreverlasting1202.github.io/2022/01/28/2021%20Ptz,Summer%20Day2/">41st Petrozavodsk Summer 2021. Day 2. The American Contest</a> 1 6/13</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：还剩两个小时的时候就被迫外出了，没打到最后。。。</p>
+</div></div>
+</li>
+<li><p>2022.2.3 <a href="https://foreverlasting1202.github.io/2022/02/03/2021%20Ptz,20Summer%20Day1/">41st Petrozavodsk Summer 2021. Day 3. IQ test</a> 1 4/13</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：半场开始神智不清，直接跑路了。最近作息有点逆天，完全不想学习，明天再调整下，后天回归正常作息捏。</p>
+</div></div>
+</li>
+<li><p>2022.2.22 <a href="https://foreverlasting1202.github.io/2022/02/22/CF1644/">CF1644</a> 1 5/6</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：写完前五题还有一个半小时，然后就一个小时想不出最后一题，直接润了。</p>
+</div></div>
+</li>
+<li><p>2022.2.23 <a href="https://foreverlasting1202.github.io/2022/02/23/CF1641/">CF1641</a> 1 2/6</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>summary</span></div>
+    <div class="hide-content"><p>实况：呃呃，少一个 <code>break</code> 调了一整场，交了十七发，掉大分。</p>
+</div></div></li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">foreverlasting</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://foreverlasting1202.github.io/2021/07/06/%E8%AE%AD%E7%BB%83%E5%AE%9E%E5%BD%95/">http://foreverlasting1202.github.io/2021/07/06/训练实录/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/OI/">OI</a></div><div class="post_share"><div class="social-share" data-image="https://s2.loli.net/2022/02/01/2WZRAST8qgLz6Ey.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/07/06/2020%20ICPC%20Shanghai%20Site/"><img class="prev-cover" src="https://pic.imgdb.cn/item/61fa02cf2ab3f51d91b60ec0.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">2020 ICPC Shanghai Site</div></div></a></div><div class="next-post pull-right"><a href="/2021/07/01/IOI2020-hw/"><img class="next-cover" src="https://pic.imgdb.cn/item/61fa2df32ab3f51d91dd7307.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">IOI2020集训队作业</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2022/02/28/bijectivepr/" title="a few solutions of bijective proof problems"><img class="cover" src="https://pic.imgdb.cn/item/61fa03b12ab3f51d91b6c483.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-28</div><div class="title">a few solutions of bijective proof problems</div></div></a></div><div><a href="/2022/02/05/loj%E9%9A%8F%E6%9C%BA%E5%81%9A%E9%A2%98/" title="loj 随机做题"><img class="cover" src="https://pic.imgdb.cn/item/61fa051f2ab3f51d91b7ee03.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-05</div><div class="title">loj 随机做题</div></div></a></div><div><a href="/2021/10/18/%E5%81%9A%E9%A2%98%E8%AE%B0%E5%BD%95/" title="做题记录"><img class="cover" src="https://s2.loli.net/2022/02/01/ZGLrd376Kyx9wvE.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-10-18</div><div class="title">做题记录</div></div></a></div><div><a href="/2021/08/10/%E5%8F%A3%E8%83%A1%E8%AE%B0%E5%BD%95/" title="口胡记录"><img class="cover" src="https://pic.imgdb.cn/item/61fa039f2ab3f51d91b6b75b.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-08-10</div><div class="title">口胡记录</div></div></a></div><div><a href="/2021/06/13/%E5%A4%8D%E5%81%A5%E8%AE%AD%E7%BB%83/" title="复 健 训 练"><img class="cover" src="https://s2.loli.net/2022/02/01/ZGLrd376Kyx9wvE.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-06-13</div><div class="title">复 健 训 练</div></div></a></div><div><a href="/2021/06/13/tips/" title="一些需注意的点"><img class="cover" src="https://s2.loli.net/2022/02/01/9BMbc35xJVwjUKr.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-06-13</div><div class="title">一些需注意的点</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/cute.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">foreverlasting</div><div class="author-info__description">呜呜呜。</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">134</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">3</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">40</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/foreverlasting1202" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="/573902690@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">现在装了个大概，还有 tag、link 之类的东西没整好，同时文章部分预览也没完成，以后慢慢整吧。</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/9102/01/01/%E8%BF%91%E6%9C%9F%E6%9B%B4%E6%96%B0%E7%9A%84%E5%8D%9A%E5%AE%A2/" title="近期更新的博客"><img src="https://pic.imgdb.cn/item/61fa03602ab3f51d91b685c4.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="近期更新的博客"/></a><div class="content"><a class="title" href="/9102/01/01/%E8%BF%91%E6%9C%9F%E6%9B%B4%E6%96%B0%E7%9A%84%E5%8D%9A%E5%AE%A2/" title="近期更新的博客">近期更新的博客</a><time datetime="9102-01-01T13:50:00.000Z" title="Created 9102-01-01 21:50:00">9102-01-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/28/bijectivepr/" title="a few solutions of bijective proof problems"><img src="https://pic.imgdb.cn/item/61fa03b12ab3f51d91b6c483.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="a few solutions of bijective proof problems"/></a><div class="content"><a class="title" href="/2022/02/28/bijectivepr/" title="a few solutions of bijective proof problems">a few solutions of bijective proof problems</a><time datetime="2022-02-28T15:30:00.000Z" title="Created 2022-02-28 23:30:00">2022-02-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/27/%E6%97%A0%E5%81%8F%E4%BC%B0%E8%AE%A1%E7%9A%84%E7%94%B1%E6%9D%A5/" title="无偏估计的由来"><img src="https://pic.imgdb.cn/item/61fa041f2ab3f51d91b72144.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无偏估计的由来"/></a><div class="content"><a class="title" href="/2022/02/27/%E6%97%A0%E5%81%8F%E4%BC%B0%E8%AE%A1%E7%9A%84%E7%94%B1%E6%9D%A5/" title="无偏估计的由来">无偏估计的由来</a><time datetime="2022-02-27T15:30:00.000Z" title="Created 2022-02-27 23:30:00">2022-02-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/22/CF1644/" title="CF1644"><img src="https://pic.imgdb.cn/item/61fa04662ab3f51d91b75d86.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CF1644"/></a><div class="content"><a class="title" href="/2022/02/22/CF1644/" title="CF1644">CF1644</a><time datetime="2022-02-22T15:30:00.000Z" title="Created 2022-02-22 23:30:00">2022-02-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/05/loj%E9%9A%8F%E6%9C%BA%E5%81%9A%E9%A2%98/" title="loj 随机做题"><img src="https://pic.imgdb.cn/item/61fa051f2ab3f51d91b7ee03.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="loj 随机做题"/></a><div class="content"><a class="title" href="/2022/02/05/loj%E9%9A%8F%E6%9C%BA%E5%81%9A%E9%A2%98/" title="loj 随机做题">loj 随机做题</a><time datetime="2022-02-05T15:30:00.000Z" title="Created 2022-02-05 23:30:00">2022-02-05</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 By foreverlasting</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Local search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.2
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
+            const target = node.parentNode
+            if (target.nodeName.toLowerCase() === 'li') {
+              target.parentNode.classList.add('has-jax')
+            } else {
+              target.classList.add('has-jax')
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'vBIv3E8Y4e1znLKVs85Y0uSh-gzGzoHsz',
+      appKey: 'Dpqs6OR87Ev6XoG6XcSPjToh',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>《数学分析中的典型问题与方法》1.2 题目选做 | foreverlasting's blog</title><meta name="keywords" content="OI"><meta name="author" content="foreverlasting"><meta name="copyright" content="foreverlasting"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="继续。 以下题目来自于裴礼文的《数学分析中的典型问题与方法》。 例 1.2.11）用 $\varepsilon-N$ 方法证明  \lim_{n\to \infty} (n+1)^{\frac{1}{n}}&#x3D;1;2）设 $\lim_{n\to \infty} x_n&#x3D;A$，$A$ 是有限数，试证：  \lim_{n\to \infty} \frac{\sum_{i&#x3D;1}^n x_i}{n}&#x3D;A.3">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《数学分析中的典型问题与方法》1.2 题目选做">
+<meta property="og:url" content="http://foreverlasting1202.github.io/2021/09/11/%E8%A3%B4%E7%A4%BC%E6%96%871,2/index.html">
+<meta property="og:site_name" content="foreverlasting&#39;s blog">
+<meta property="og:description" content="继续。 以下题目来自于裴礼文的《数学分析中的典型问题与方法》。 例 1.2.11）用 $\varepsilon-N$ 方法证明  \lim_{n\to \infty} (n+1)^{\frac{1}{n}}&#x3D;1;2）设 $\lim_{n\to \infty} x_n&#x3D;A$，$A$ 是有限数，试证：  \lim_{n\to \infty} \frac{\sum_{i&#x3D;1}^n x_i}{n}&#x3D;A.3">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://pic.imgdb.cn/item/61fa03cf2ab3f51d91b6df0b.png">
+<meta property="article:published_time" content="2021-09-11T15:30:00.000Z">
+<meta property="article:modified_time" content="2022-02-01T14:42:42.065Z">
+<meta property="article:author" content="foreverlasting">
+<meta property="article:tag" content="OI">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic.imgdb.cn/item/61fa03cf2ab3f51d91b6df0b.png"><link rel="shortcut icon" href="/img/1.jpg"><link rel="canonical" href="http://foreverlasting1202.github.io/2021/09/11/%E8%A3%B4%E7%A4%BC%E6%96%871,2/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: 'days',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '《数学分析中的典型问题与方法》1.2 题目选做',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: true,
+  postUpdate: '2022-02-01 22:42:42'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/cute.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">134</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">3</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">40</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> Messageboard</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/timeline/"><i class="fa-fw fa fa-bell"></i><span> Timeline</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-sitemap"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="/myself/"><i class="fa-fw fa fa-id-card"></i><span> myself</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://pic.imgdb.cn/item/61fa03cf2ab3f51d91b6df0b.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">foreverlasting's blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> Messageboard</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/timeline/"><i class="fa-fw fa fa-bell"></i><span> Timeline</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-sitemap"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="/myself/"><i class="fa-fw fa fa-id-card"></i><span> myself</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">《数学分析中的典型问题与方法》1.2 题目选做</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-09-11T15:30:00.000Z" title="Created 2021-09-11 23:30:00">2021-09-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-02-01T14:42:42.065Z" title="Updated 2022-02-01 22:42:42">2022-02-01</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%81%9A%E9%A2%98%E8%AE%B0%E5%BD%95/">做题记录</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="《数学分析中的典型问题与方法》1.2 题目选做"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>继续。</p>
+<p>以下题目来自于裴礼文的《数学分析中的典型问题与方法》。<br><span id="more"></span></p>
+<h3 id="例-1-2-1"><a href="#例-1-2-1" class="headerlink" title="例 1.2.1"></a>例 1.2.1</h3><p>1）用 $\varepsilon-N$ 方法证明</p>
+<script type="math/tex; mode=display">
+\lim_{n\to \infty} (n+1)^{\frac{1}{n}}=1;</script><p>2）设 $\lim_{n\to \infty} x_n=A$，$A$ 是有限数，试证：</p>
+<script type="math/tex; mode=display">
+\lim_{n\to \infty} \frac{\sum_{i=1}^n x_i}{n}=A.</script><p>3）设 $\lbrace a_n\rbrace$ 是一无零数列，满足 $a_n\to 0$（ 当 $n\to \infty$ ）。定义数集 </p>
+<script type="math/tex; mode=display">
+P=\lbrace ka_i|k\in \mathbb{Z},i\in \mathbb{N}\rbrace</script><p>试证：对任何实数 $b$，存在数列 $\lbrace b_n\rbrace \subset P$，使得 $\lim_{n\to \infty} b_n=b$。</p>
+<p><strong>解</strong>：1）$n+1=(1+\alpha)^n\geq \frac{n(n-1)}{2}\alpha^2$。于是有 $\alpha^2\sqrt{\frac{2(n+1)}{n(n-1)}}&lt;1+\varepsilon$，因此可以容易计算出 $N$，来满足极限定义。</p>
+<p>2）还是考虑从极限定义入手，即证对于任意的 $\varepsilon&gt;0$，都存在一个 $N$，满足对所有的 $n&gt;N$，都有 $|\frac{\sum_{i=1}^n x_i}{n}-A|&lt;\varepsilon$。</p>
+<p>做进一步化简，即</p>
+<script type="math/tex; mode=display">
+|\frac{\sum_{i=1}^n x_i}{n}-A|=|\frac{\sum_{i=1}^n x_i-A}{n}|\\\\
+\leq \frac{\sum_{i=1}^n |x_i-A|}{n}</script><p>再回头处理题给条件，即对于任意的 $\varepsilon’&gt;0$，都存在一个 $N’$，满足对所有的 $n’&gt;N’$，都有 $|x_n-A|&lt;\varepsilon’$。</p>
+<p>不妨设 $\sum_{i=1}^{N’}|x_i-A|=C$，再对之前的式子进行放缩，即只要</p>
+<script type="math/tex; mode=display">
+=\frac{C+\sum_{i=N'+1}^n |x_i-A|}{n}\\\\
+\leq \frac{C+(n-N')\varepsilon'}{n}<\varepsilon\\\\
+\iff \varepsilon'<\frac{n\varepsilon-C}{n-N'}</script><p>不妨令 $n=\max(\lceil\frac{C}{\epsilon}\rceil+1,N’+1)$，取 $\varepsilon’$ 为 $\frac{n\varepsilon-C}{2(n-N’)}$ 即可得证。</p>
+<p>3）利用 $a_n\to 0$，说明对于任意的 $\varepsilon_m=\frac{1}{m}&gt;0$，总存在一个 $n_m\in \mathbb{N}$，满足 $|a_{n_m}|&lt;\varepsilon_m$。</p>
+<p>于是，总存在一个  $k_m\in \mathbb{Z},k_ma_{n_m}\in P$，使得 $|b-k_ma_{n_m}|\leq |a_{n_m}|&lt;\varepsilon_m$。</p>
+<p>于是根据 $m$，构造 $b_m=k_ma_{n_m}$，再令 $m\to \infty$，即可得出该数列的极限为 $b$。</p>
+<h3 id="例-1-2-2"><a href="#例-1-2-2" class="headerlink" title="例 1.2.2"></a>例 1.2.2</h3><p>证明：若 $p_k&gt;0 (k=1,2,…)$ 且 $\lim_{n\to \infty} \frac{p_n}{\sum_{i=1}^n p_i}=0,\lim_{n\to \infty} a_n=a$，则 </p>
+<script type="math/tex; mode=display">
+\lim_{n\to \infty} \frac{p_1a_n+p_2a_{n-1}+...+p_na_1}{p_1+p_2+...+p_n}=a.</script><p> <strong>解</strong>：类似上题的 2），我们做适当的放缩，即</p>
+<script type="math/tex; mode=display">
+|\frac{p_1a_n+p_2a_{n-1}+...+p_na_1}{p_1+p_2+...+p_n}-a|\\\\
+\leq \frac{1}{\sum_{i=1}^n p_i}(\sum_{i=1}^n p_i|a_{n-i+1}-a|)</script><p>再根据 $a_n$ 的极限，有对于任意的 $\varepsilon&gt;0$，存在 $N$，满足所有 $n’&gt;N$，都有 $|a_{n’}-a|&lt;\varepsilon$。</p>
+<p>于是类似上一题，就有</p>
+<script type="math/tex; mode=display">
+\frac{1}{\sum_{i=1}^n p_i}(\sum_{i=1}^n p_i|a_{n-i+1}-a|)\\\\
+<\frac{1}{\sum_{i=1}^n p_i}(\sum_{i=1}^N p_i|a_{n-i+1}-a|+\varepsilon \sum_{i=N+1}^n p_i)\\\\
+=\frac{1}{\sum_{i=1}^n p_i}(C+\varepsilon \sum_{i=N+1}^n p_i)</script><p>再想我们想干什么。我们希望证明对于任意的 $\varepsilon’&gt;0$，存在 $N’$，满足所有 $n&gt;N’$，都有 $|\frac{p_1a_n+p_2a_{n-1}+…+p_na_1}{p_1+p_2+…+p_n}-a|&lt;\varepsilon’$。</p>
+<p>再利用 $\frac{p_n}{\sum_{i=1}^n p_i}\to 0$，可以取得一个 $\varepsilon’’$，使得只需要 </p>
+<script type="math/tex; mode=display">
+\frac{C}{\sum_{i=1}^n p_i}+(n-N)\varepsilon \varepsilon''<\varepsilon'</script><p>而 $\sum_{i=1}^n p_i$ 要么 $\to +\infty$，那么 $\to C’\neq 0$，于是对我们构造 $\varepsilon$ 无影响，因此得证。 </p>
+<h3 id="例-1-2-3"><a href="#例-1-2-3" class="headerlink" title="例 1.2.3"></a>例 1.2.3</h3><p>设实数列 $\lbrace x_n\rbrace$ 满足 $x_n-x_{n-2}\to 0 (n\to \infty)$，证明：</p>
+<script type="math/tex; mode=display">
+\lim_{n\to \infty} \frac{x_n-x_{n-1}}{n}=0.</script><p> <strong>解</strong>：令 $a_{n}=x_{n+2}-x_n$，则 $x_n-x_{n-1}=x_1+x_2+\sum_{i=1}^{n-2}a_i$，而且 $a_n\to 0$。</p>
+<p>于是原命题等价于</p>
+<script type="math/tex; mode=display">
+\lim_{n\to \infty} \frac{\sum_{i=1}^{n-2} a_i}{n}=0</script><p>更进一步，可以写成 </p>
+<script type="math/tex; mode=display">
+\lim_{n\to \infty} \frac{\sum_{i=1}^{n} a_i}{n}=0</script><p>这就是 例 1.2.1 的 2）了。</p>
+<h3 id="例-1-2-4"><a href="#例-1-2-4" class="headerlink" title="例 1.2.4"></a>例 1.2.4</h3><p>按 $\varepsilon-\delta$ 法证明</p>
+<script type="math/tex; mode=display">
+\lim_{x\to 1} \sqrt{\frac{7}{16x^2-9}}=1.</script><p> <strong>解</strong>：<del>可以轻松知道它是连续的，所以证毕。</del></p>
+<p>从定义的角度而言，对于任意的 $\varepsilon&gt;0$，总存在一个 $\delta&gt;0$，使得对于任意的 $x$ 满足 $|x-1|&lt;\delta$，都有 $|\sqrt{\frac{7}{16x^2-9}}-1|&lt;\varepsilon$。</p>
+<p>直接暴力做即可，即</p>
+<script type="math/tex; mode=display">
+(1-\varepsilon)^2<\frac{7}{16x^2-9}<(1+\varepsilon)^2,\varepsilon<1\\\\
+\iff \frac{\frac{7}{(1+\varepsilon)^2}+9}{16}<x^2<\frac{\frac{7}{(1-\varepsilon)^2}+9}{16},\varepsilon<1\\\\
+\iff \frac{\frac{7}{(1+\varepsilon)^2}+9}{16}<x^2<\frac{\frac{7}{(1-\varepsilon)^2}+9}{16},\varepsilon<1</script><p>开根再减一容易构造出 $\delta$，而 $\varepsilon&gt;1$ 再类似地讨论下即可。</p>
+<h3 id="例-1-2-5"><a href="#例-1-2-5" class="headerlink" title="例 1.2.5"></a>例 1.2.5</h3><p>设 $x\to 0$ 时，$f(x)\backsim x,x_n=\sum_{i=1}^n f(\frac{2i-1}{n^2}a)$。试证</p>
+<script type="math/tex; mode=display">
+\lim_{n\to \infty} x_n=a\ (a>0).</script><p> <strong>解</strong>：注意到 $\sum_{i=1}^n 2i-1=n^2$，于是直接用定义法证明，即对于任意的 $\varepsilon&gt;0$，存在 $N$，使得对任意的 $n&gt;N$，都满足 $|x_n-a|&lt;\varepsilon$。</p>
+<p>于是考虑将 $a$ 拆掉，即</p>
+<script type="math/tex; mode=display">
+|\sum_{i=1}^n f(\frac{2i-1}{n^2}a)-\sum_{i=1}^n \frac{2i-1}{n^2}a|\\\\
+=|\sum_{i=1}^n (f(\frac{2i-1}{n^2}a)-\frac{2i-1}{n^2}a)|\\\\
+\leq \sum_{i=1}^n|f(\frac{2i-1}{n^2}a)-\frac{2i-1}{n^2}a|</script><p>而有趣的是，$f(x)\backsim x$ 告诉我们 $\lim_{x\to 0} \frac{f(x)}{x}=1$，于是按照定义，就有对于任意的 $\varepsilon’=\frac{\varepsilon}{a}&gt;0$，存在 $\delta$，满足 $|x|&lt;\delta$ 时，都有 $|\frac{f(x)}{x}-1|&lt;\varepsilon’$。</p>
+<p>再令 $N=\frac{2a}{\delta}$，则根据 $n&gt;N$，有 $0&lt;\frac{2i-1}{n^2}a&lt;\delta$，于是将前面的式子两边乘分母，再求和，就证毕了。</p>
+<h3 id="练习-1"><a href="#练习-1" class="headerlink" title="练习 1"></a>练习 1</h3><p>证明：</p>
+<p>1）</p>
+<script type="math/tex; mode=display">
+\lim_{n\to \infty} \prod_{i=1}^{n} (1+\frac{2i-1}{n^2}a^2)=e^{a^2};</script><p>2）</p>
+<script type="math/tex; mode=display">
+\lim_{n\to \infty}\prod_{i=1}^{n+1}\cos \frac{\sqrt{2i-1}}{n}a^2=e^{-\frac{a^4}{2}}.</script><p><strong>解</strong>：1）取对，有 $\sum_{i=1}^n\ln (1+\frac{2i-1}{n^2}a^2)\to a^2$，这正是上一题。</p>
+<p>2）取对，有 $\sum_{i=1}^{n+1} \ln(|\cos \frac{\sqrt{2i-1}}{n}a^2|)\to -\frac{a^4}{2}$，而 $\cos x$ 可以通过 $\mathrm{Taylor}$ 展开，等价至 $1-\frac{x^2}{2}$，于是证毕。</p>
+<h3 id="练习-2"><a href="#练习-2" class="headerlink" title="练习 2"></a>练习 2</h3><p>设 $\lim_{n\to \infty} a_n=a$，试证</p>
+<script type="math/tex; mode=display">
+\lim_{n\to \infty} \frac{1}{2^n}(a_0+\binom{n}{1}a_1+\binom{n}{2}a_2+...+\binom{n}{n}a_n)=a.</script><p> <strong>解</strong>：容易想到二项式定理，即写成</p>
+<script type="math/tex; mode=display">
+\frac{1}{2^n}(a_0+\binom{n}{1}a_1+\binom{n}{2}a_2+...+\binom{n}{n}a_n-\sum_{i=0}^n \binom{n}{i}a)\\\\
+=\frac{\sum_{i=0}^n \binom{n}{i}(a_i-a)}{2^n}</script><p>还是一样的经典的做法，把 $[0,n]$ 分成两部分，一部分是常数，另一部分利用 $a_n\to a$ 可以放到一个取好的 $\varepsilon$，所以就能证好了。</p>
+<h3 id="练习-3"><a href="#练习-3" class="headerlink" title="练习 3"></a>练习 3</h3><p>若将 $\frac{\binom{n}{k}}{2^n}$ 改为 $\alpha_{n,k}$，$\forall n\in \mathbb{N}:k=0,1,2,..,n$，问 $\alpha_{n,k}$ 应满足什么条件，上面的命题仍然成立？</p>
+<p> <strong>解</strong>：容易发现若 $\sum \alpha_{n,k}\neq 1$，那就一定不行。</p>
+<p>另一方面，根据上述情况，大致要求 $\lim_{n\to \infty} \sum_{i=0}^N \alpha_{n,i}=0$，可以证明这是充分条件，是不是必要我就不知道了。</p>
+<h3 id="例-1-2-6"><a href="#例-1-2-6" class="headerlink" title="例 1.2.6"></a>例 1.2.6</h3><p>设 $f:\mathbb{N}\to\mathbb{N_1},n=f(m)$（ $\mathbb{N}$ 和 $\mathbb{N_1}$ 都是全体自然数组成的空间 ），且 $\forall n\in\mathbb{N}:f^{-1}(n)$ 为有限集。试证：若 $\lim_{n\to \infty} a_n\overset{存在}{=}a$，则 $\lim_{m\to \infty} a_{f(m)}\overset{存在}{=}a.$</p>
+<p> <strong>解</strong>：考虑用邻域去证明。利用 $\lim_{n\to \infty} a_n=a$，可以说明对任意的 $\varepsilon&gt;0$，在 $a$ 的邻域外最多有 $a_n$ 的有限项，记作 $\lbrace a_{n_j}\rbrace_{j=1}^k$。</p>
+<p>根据 $f^{-1}$ 是有限集，因此对每一个 $n_j$ 而言，它对应的 $\lbrace m|n_j=f(m)\rbrace$ 皆为有限集，它们的并 $E=\cup_{j=1}^k \lbrace m|n_j=f(m)\rbrace$ 仍是有限集。这也就是说，对 $a$ 的 $\varepsilon$ 邻域也只有有限的 $a_{f(m)}$ 项，于是得证。</p>
+<h3 id="例-1-2-7"><a href="#例-1-2-7" class="headerlink" title="例 1.2.7"></a>例 1.2.7</h3><p>设 $x_n=\sum_{i=1}^n \frac{\sin i}{2^i}$，试证 $\lbrace x_n\rbrace$ 收敛。</p>
+<p> <strong>解</strong>：显然利用 $\mathrm{Cauchy}$ 收敛，对任意的 $\varepsilon&gt;0$，都存在一个 $N$，满足任意的 $n&gt;m&gt;N$，有 $|x_m-x_n|&lt;\varepsilon$。</p>
+<p>稍微做点基础的化简和放缩，即</p>
+<script type="math/tex; mode=display">
+|\sum_{i=m+1}^n \frac{\sin i}{2^i}|\\\\
+\leq |\sum_{i=m+1}^n \frac{1}{2^i}|=\frac{1}{2^{m+1}} \frac{1-\frac{1}{2^{n-m}}}{1-\frac{1}{2}}\\\\
+=\frac{1}{2^m} (1-\frac{1}{2^{n-m}})<\frac{1}{m}</script><p>于是对于任意的 $\varepsilon$，总能找到一个 $N$，于是证毕。</p>
+<h3 id="例-1-2-8"><a href="#例-1-2-8" class="headerlink" title="例 1.2.8"></a>例 1.2.8</h3><p>判断以下命题的真伪：</p>
+<p>数列 $\lbrace a_n\rbrace$ 存在极限 $\lim_{n\to \infty} a_n=a$ 的充要条件是：对任一自然数 $p$，都有 $\lim_{n\to \infty} |a_{n+p}-a_n|=0$。</p>
+<p> <strong>解</strong>：充要条件显然是有问题的，显然后者不能推出前者。比如 $a_n=\sqrt{n}$，前者显然不收敛。</p>
+<p>但前者可以推出后者，利用定义，有 </p>
+<p>对任意的 $\varepsilon&gt;0$，存在 $N$，对任意的 $n&gt;N$，满足 $|a_n-a|&lt;\varepsilon$。</p>
+<p>而 $|a_{n}-a|&lt;\varepsilon,|a_{n+p}-a|&lt;\varepsilon$，两者相加，利用三角不等式，有 $|a_{n+p}-a_n|&lt;2\varepsilon$，取 $\varepsilon=\frac{\varepsilon’}{2}$ 即可。</p>
+<h3 id="例-1-2-9"><a href="#例-1-2-9" class="headerlink" title="例 1.2.9"></a>例 1.2.9</h3><p>证明 $\lim_{n\to \infty} \sin n$ 不存在。</p>
+<p> <strong>解</strong>：显然，比如你取了 $n$，那再取 $m=n+\frac{\pi}{4}$ 即可。</p>
+<h3 id="例-1-2-10"><a href="#例-1-2-10" class="headerlink" title="例 1.2.10"></a>例 1.2.10</h3><p>数列 $S_n=\sum_{k=1}^n \frac{1}{k}$ 发散。</p>
+<p> <strong>解</strong>：调和级数的发散太容易了。随便举个例子，可以将连着的 $2^p$ 项都放到 $\frac{1}{2^p}$，显然就发散了。</p>
+<h3 id="练习-1-1"><a href="#练习-1-1" class="headerlink" title="练习 1"></a>练习 1</h3><p>设数列 $\lbrace x_n\rbrace$ 满足：当 $m&gt;n$ 时，有 $|x_n-x_m|&gt;\frac{1}{n}$。证明：$\lbrace x_n\rbrace$ 无界。</p>
+<p> <strong>解</strong>：根据 $|x_m-x_n|&gt;\frac{1}{n}$，则说明对邻域 $(x_n,\frac{1}{n})$ 而言，不存在 $x_m (m&gt;n)$ 在邻域中。而 $x_1+\sum \frac{1}{i}$ 是发散的，因此 $\lbrace x_n\rbrace$ 必然发散。</p>
+<h3 id="例-1-2-11"><a href="#例-1-2-11" class="headerlink" title="例 1.2.11"></a>例 1.2.11</h3><p>证明：数列 $x_n=1+\frac{1}{2}+…+\frac{1}{n}-\ln n ( n=1,2,… )$ 单调下降有界，从而有极限（ 此极限称为 $\mathrm{Euler}$ 常数，下面记作 $\mathrm{C}$ ）。于是</p>
+<script type="math/tex; mode=display">
+1+\frac{1}{2}+...+\frac{1}{n}\overset{表示成}{=}\mathrm{C}+\ln n+\varepsilon_n</script><p>，其中 $\varepsilon_n\to 0$，当 $n\to \infty$ 时。</p>
+<p><strong>解</strong>：单调性显然可以作差，即 $x_{n+1}-x_n=\frac{1}{n+1}+\ln(n)-\ln(n+1)=\frac{1}{n+1}+\ln(1-\frac{1}{n+1})\leq 0$。所以单调递减。</p>
+<p>有界性可以利用例 1.2.10 的做法，可以轻松证明。</p>
+<h3 id="例-1-2-12"><a href="#例-1-2-12" class="headerlink" title="例 1.2.12"></a>例 1.2.12</h3><p>设 $x_n=\sum_{k=1}^n \frac{1}{\sqrt{k}}-2\sqrt{n}$，证明 $\lim_{n\to \infty} x_n$ 存在。</p>
+<p> <strong>解</strong>：考虑 $\mathrm{Cauchy}$ 收敛性，对任意的 $\varepsilon&gt;0$，要找到一个 $N$，使得对任意的 $n&gt;m&gt;N$，满足 $\sum_{i=m+1}^n \frac{1}{\sqrt{i}} -2\sqrt{n}+2\sqrt{m}&lt;\varepsilon$。</p>
+<p>这是经典的放缩了，即 </p>
+<script type="math/tex; mode=display">
+\frac{1}{\sqrt{i}}=\frac{2}{2\sqrt{i}}<\frac{2}{\sqrt{i}+\sqrt{i-1}}=2(\sqrt{i}-\sqrt{i-1})</script><p>于是原式就等价于 $\sum_{i=m+1}^n \frac{1}{\sqrt{i}} -2\sqrt{n}+2\sqrt{m}&lt;0&lt;\varepsilon$，得证。</p>
+<h3 id="例-1-2-13"><a href="#例-1-2-13" class="headerlink" title="例 1.2.13"></a>例 1.2.13</h3><p>试证：</p>
+<script type="math/tex; mode=display">
+\lim_{n\to \infty}x_n=a\iff\lim_{n\to \infty} x_{2n}=a,\lim_{n\to \infty} x_{2n+1}=a.</script><p> <strong>解</strong>：奇偶子列收敛于同一值等价于原数列收敛于该值是容易证明的，通过比较好的对 $N$ 的构造即可，这里略去不证了。</p>
+<h3 id="例-1-2-14"><a href="#例-1-2-14" class="headerlink" title="例 1.2.14"></a>例 1.2.14</h3><p>设函数 $f(x)$ 在点 $x_0$ 的邻域 $I$ （ 点 $x_0$ 可能例外 ）内有定义。试证：如果对于任意的点列 $\lbrace x_n\rbrace$，这里 $x_n\in I,x_n\to x_0 ( n\to \infty ),0&lt;|x_{n+1}-x_0|&lt;|x_n-x_0|$，都有 。</p>
+<script type="math/tex; mode=display">
+\lim_{n\to \infty} f(x_n)=A</script><p>那么 $\lim_{x\to x_0} f(x)=A$。</p>
+<p> <strong>解</strong>：</p>
+<h3 id="例-1-2-15"><a href="#例-1-2-15" class="headerlink" title="例 1.2.15"></a>例 1.2.15</h3><p>证明从任一数列 $\lbrace x_n\rbrace$ 中必可选出一个（ 不一定严格 ）单调的子列。</p>
+<p> <strong>解</strong>：</p>
+<h3 id="例-1-2-16"><a href="#例-1-2-16" class="headerlink" title="例 1.2.16"></a>例 1.2.16</h3><p>举例说明无穷多个无穷小量之积，可以不是无穷小量。</p>
+<p> <strong>解</strong>：</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">foreverlasting</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://foreverlasting1202.github.io/2021/09/11/%E8%A3%B4%E7%A4%BC%E6%96%871,2/">http://foreverlasting1202.github.io/2021/09/11/裴礼文1,2/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/OI/">OI</a></div><div class="post_share"><div class="social-share" data-image="https://pic.imgdb.cn/item/61fa03cf2ab3f51d91b6df0b.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/09/13/2021.9.13/"><img class="prev-cover" src="https://pic.imgdb.cn/item/61fa03b12ab3f51d91b6c483.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">2021.9.13</div></div></a></div><div class="next-post pull-right"><a href="/2021/09/08/%E8%A3%B4%E7%A4%BC%E6%96%871.1/"><img class="next-cover" src="https://s2.loli.net/2022/02/01/2WZRAST8qgLz6Ey.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">《数学分析中的典型问题与方法》1.1 题目选做</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2022/02/28/bijectivepr/" title="a few solutions of bijective proof problems"><img class="cover" src="https://pic.imgdb.cn/item/61fa03b12ab3f51d91b6c483.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-28</div><div class="title">a few solutions of bijective proof problems</div></div></a></div><div><a href="/2022/02/05/loj%E9%9A%8F%E6%9C%BA%E5%81%9A%E9%A2%98/" title="loj 随机做题"><img class="cover" src="https://pic.imgdb.cn/item/61fa051f2ab3f51d91b7ee03.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-05</div><div class="title">loj 随机做题</div></div></a></div><div><a href="/2021/10/18/%E5%81%9A%E9%A2%98%E8%AE%B0%E5%BD%95/" title="做题记录"><img class="cover" src="https://s2.loli.net/2022/02/01/ZGLrd376Kyx9wvE.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-10-18</div><div class="title">做题记录</div></div></a></div><div><a href="/2021/08/10/%E5%8F%A3%E8%83%A1%E8%AE%B0%E5%BD%95/" title="口胡记录"><img class="cover" src="https://pic.imgdb.cn/item/61fa039f2ab3f51d91b6b75b.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-08-10</div><div class="title">口胡记录</div></div></a></div><div><a href="/2021/07/06/%E8%AE%AD%E7%BB%83%E5%AE%9E%E5%BD%95/" title="训练实录"><img class="cover" src="https://s2.loli.net/2022/02/01/2WZRAST8qgLz6Ey.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-07-06</div><div class="title">训练实录</div></div></a></div><div><a href="/2021/06/13/%E5%A4%8D%E5%81%A5%E8%AE%AD%E7%BB%83/" title="复 健 训 练"><img class="cover" src="https://s2.loli.net/2022/02/01/ZGLrd376Kyx9wvE.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-06-13</div><div class="title">复 健 训 练</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/cute.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">foreverlasting</div><div class="author-info__description">呜呜呜。</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">134</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">3</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">40</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/foreverlasting1202" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="/573902690@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">现在装了个大概，还有 tag、link 之类的东西没整好，同时文章部分预览也没完成，以后慢慢整吧。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B-1-2-1"><span class="toc-number">1.</span> <span class="toc-text">例 1.2.1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B-1-2-2"><span class="toc-number">2.</span> <span class="toc-text">例 1.2.2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B-1-2-3"><span class="toc-number">3.</span> <span class="toc-text">例 1.2.3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B-1-2-4"><span class="toc-number">4.</span> <span class="toc-text">例 1.2.4</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B-1-2-5"><span class="toc-number">5.</span> <span class="toc-text">例 1.2.5</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%83%E4%B9%A0-1"><span class="toc-number">6.</span> <span class="toc-text">练习 1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%83%E4%B9%A0-2"><span class="toc-number">7.</span> <span class="toc-text">练习 2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%83%E4%B9%A0-3"><span class="toc-number">8.</span> <span class="toc-text">练习 3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B-1-2-6"><span class="toc-number">9.</span> <span class="toc-text">例 1.2.6</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B-1-2-7"><span class="toc-number">10.</span> <span class="toc-text">例 1.2.7</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B-1-2-8"><span class="toc-number">11.</span> <span class="toc-text">例 1.2.8</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B-1-2-9"><span class="toc-number">12.</span> <span class="toc-text">例 1.2.9</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B-1-2-10"><span class="toc-number">13.</span> <span class="toc-text">例 1.2.10</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%83%E4%B9%A0-1-1"><span class="toc-number">14.</span> <span class="toc-text">练习 1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B-1-2-11"><span class="toc-number">15.</span> <span class="toc-text">例 1.2.11</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B-1-2-12"><span class="toc-number">16.</span> <span class="toc-text">例 1.2.12</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B-1-2-13"><span class="toc-number">17.</span> <span class="toc-text">例 1.2.13</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B-1-2-14"><span class="toc-number">18.</span> <span class="toc-text">例 1.2.14</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B-1-2-15"><span class="toc-number">19.</span> <span class="toc-text">例 1.2.15</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B-1-2-16"><span class="toc-number">20.</span> <span class="toc-text">例 1.2.16</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/9102/01/01/%E8%BF%91%E6%9C%9F%E6%9B%B4%E6%96%B0%E7%9A%84%E5%8D%9A%E5%AE%A2/" title="近期更新的博客"><img src="https://pic.imgdb.cn/item/61fa03602ab3f51d91b685c4.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="近期更新的博客"/></a><div class="content"><a class="title" href="/9102/01/01/%E8%BF%91%E6%9C%9F%E6%9B%B4%E6%96%B0%E7%9A%84%E5%8D%9A%E5%AE%A2/" title="近期更新的博客">近期更新的博客</a><time datetime="9102-01-01T13:50:00.000Z" title="Created 9102-01-01 21:50:00">9102-01-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/28/bijectivepr/" title="a few solutions of bijective proof problems"><img src="https://pic.imgdb.cn/item/61fa03b12ab3f51d91b6c483.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="a few solutions of bijective proof problems"/></a><div class="content"><a class="title" href="/2022/02/28/bijectivepr/" title="a few solutions of bijective proof problems">a few solutions of bijective proof problems</a><time datetime="2022-02-28T15:30:00.000Z" title="Created 2022-02-28 23:30:00">2022-02-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/27/%E6%97%A0%E5%81%8F%E4%BC%B0%E8%AE%A1%E7%9A%84%E7%94%B1%E6%9D%A5/" title="无偏估计的由来"><img src="https://pic.imgdb.cn/item/61fa041f2ab3f51d91b72144.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无偏估计的由来"/></a><div class="content"><a class="title" href="/2022/02/27/%E6%97%A0%E5%81%8F%E4%BC%B0%E8%AE%A1%E7%9A%84%E7%94%B1%E6%9D%A5/" title="无偏估计的由来">无偏估计的由来</a><time datetime="2022-02-27T15:30:00.000Z" title="Created 2022-02-27 23:30:00">2022-02-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/22/CF1644/" title="CF1644"><img src="https://pic.imgdb.cn/item/61fa04662ab3f51d91b75d86.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CF1644"/></a><div class="content"><a class="title" href="/2022/02/22/CF1644/" title="CF1644">CF1644</a><time datetime="2022-02-22T15:30:00.000Z" title="Created 2022-02-22 23:30:00">2022-02-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/05/loj%E9%9A%8F%E6%9C%BA%E5%81%9A%E9%A2%98/" title="loj 随机做题"><img src="https://pic.imgdb.cn/item/61fa051f2ab3f51d91b7ee03.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="loj 随机做题"/></a><div class="content"><a class="title" href="/2022/02/05/loj%E9%9A%8F%E6%9C%BA%E5%81%9A%E9%A2%98/" title="loj 随机做题">loj 随机做题</a><time datetime="2022-02-05T15:30:00.000Z" title="Created 2022-02-05 23:30:00">2022-02-05</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 By foreverlasting</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Local search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.2
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
+            const target = node.parentNode
+            if (target.nodeName.toLowerCase() === 'li') {
+              target.parentNode.classList.add('has-jax')
+            } else {
+              target.classList.add('has-jax')
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'vBIv3E8Y4e1znLKVs85Y0uSh-gzGzoHsz',
+      appKey: 'Dpqs6OR87Ev6XoG6XcSPjToh',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

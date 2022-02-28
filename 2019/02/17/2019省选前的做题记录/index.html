@@ -1,0 +1,316 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>2019省选前做题记录 | foreverlasting's blog</title><meta name="keywords" content="OI"><meta name="author" content="foreverlasting"><meta name="copyright" content="foreverlasting"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="省选前做题记录 [AHOI2013]差异后缀自动机。化简式子，发现前面一项可以通过等差数列求和得到前面为$\displaystyle \frac{(n-1)\times n \times (n+1)}{2}$，然后只用在后缀树上匹配$lca$就可以了。 [HEOI2016&#x2F;TJOI2016]字符串后缀自动机。二分+倍增+$right$集合。详见博客题解。 [TJOI2017]DNA后缀自动机裸题。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2019省选前做题记录">
+<meta property="og:url" content="http://foreverlasting1202.github.io/2019/02/17/2019%E7%9C%81%E9%80%89%E5%89%8D%E7%9A%84%E5%81%9A%E9%A2%98%E8%AE%B0%E5%BD%95/index.html">
+<meta property="og:site_name" content="foreverlasting&#39;s blog">
+<meta property="og:description" content="省选前做题记录 [AHOI2013]差异后缀自动机。化简式子，发现前面一项可以通过等差数列求和得到前面为$\displaystyle \frac{(n-1)\times n \times (n+1)}{2}$，然后只用在后缀树上匹配$lca$就可以了。 [HEOI2016&#x2F;TJOI2016]字符串后缀自动机。二分+倍增+$right$集合。详见博客题解。 [TJOI2017]DNA后缀自动机裸题。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://pic.imgdb.cn/item/61fa02dd2ab3f51d91b61b4a.jpg">
+<meta property="article:published_time" content="2019-02-17T15:30:00.000Z">
+<meta property="article:modified_time" content="2019-02-27T02:05:11.892Z">
+<meta property="article:author" content="foreverlasting">
+<meta property="article:tag" content="OI">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic.imgdb.cn/item/61fa02dd2ab3f51d91b61b4a.jpg"><link rel="shortcut icon" href="/img/1.jpg"><link rel="canonical" href="http://foreverlasting1202.github.io/2019/02/17/2019%E7%9C%81%E9%80%89%E5%89%8D%E7%9A%84%E5%81%9A%E9%A2%98%E8%AE%B0%E5%BD%95/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: 'days',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '2019省选前做题记录',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: false,
+  postUpdate: '2019-02-27 10:05:11'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/cute.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">134</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">3</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">40</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> Messageboard</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/timeline/"><i class="fa-fw fa fa-bell"></i><span> Timeline</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-sitemap"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="/myself/"><i class="fa-fw fa fa-id-card"></i><span> myself</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://pic.imgdb.cn/item/61fa02dd2ab3f51d91b61b4a.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">foreverlasting's blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-paper-plane"></i><span> Messageboard</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/timeline/"><i class="fa-fw fa fa-bell"></i><span> Timeline</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-sitemap"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="/myself/"><i class="fa-fw fa fa-id-card"></i><span> myself</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">2019省选前做题记录</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2019-02-17T15:30:00.000Z" title="Created 2019-02-17 23:30:00">2019-02-17</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2019-02-27T02:05:11.892Z" title="Updated 2019-02-27 10:05:11">2019-02-27</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%81%9A%E9%A2%98%E8%AE%B0%E5%BD%95/">做题记录</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="2019省选前做题记录"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>省选前做题记录<br><span id="more"></span></p>
+<p>[AHOI2013]差异<br>后缀自动机。<br>化简式子，发现前面一项可以通过等差数列求和得到前面为$\displaystyle \frac{(n-1)\times n \times (n+1)}{2}$，然后只用在后缀树上匹配$lca$就可以了。</p>
+<p>[HEOI2016/TJOI2016]字符串<br>后缀自动机。<br>二分+倍增+$right$集合。<br>详见博客题解。</p>
+<p>[TJOI2017]DNA<br>后缀自动机裸题。<br>建出后缀自动机，直接在上面匹配就好了。</p>
+<p>[NOI2018]你的名字<br>后缀自动机。<br>分别对于$S$和$T$建两个后缀自动机，然后维护一个$lim[i]$数组表示$T$串到第$i$位的串与$S$中最长前缀，最后答案贡献就是$\sum (len[i]-max(len[fa[i]],lim[pos[i]]))$</p>
+<p>[JSOI2009]密码<br>AC自动机。<br>求出AC自动机后，$dp[i][j][k]$表示匹配到长度为$i$，在$j$号结点，被匹配进去的串的状态$k$的方案数，输出方案直接搜索。因为有子集的情况，所以在$getfail$的时候把状态下传即可。</p>
+<p>[USACO15FEB]审查（黄金）Censoring (Gold)<br>AC自动机。<br>求出AC自动机后，用栈存一下字符串，若匹配到则删掉栈里的那个被匹配的串就好了。</p>
+<p>[USACO12JAN]视频游戏的连击Video Game Combos<br>AC自动机。<br>$dp[i][j]$表示匹配到长度为$i$，在$j$号结点的最优答案，在AC自动机上跑一下就没了。</p>
+<p>[SDOI2014]数数<br>AC自动机。<br>$dp[i][j][0/1]$表示匹配到长度为$i$，在$j$号结点，当前是否到界限（数位DP的基本套路）的方案数，AC自动机匹配一下就完事了，稍微注意一下$getfail$要下传信息和初始化。</p>
+<p>[国家集训队]最长双回文串<br>回文自动机。<br>对正反串建出回文自动机，枚举断点就没了。</p>
+<p>[SHOI2011]双倍回文<br>回文自动机。<br>先建出回文树，因为一个双倍回文的串长度一定是4的倍数，而且在$dfs$的过程中等于它长度一半的串一定出现过，所以$dfs$的时候更新一下答案就好了。</p>
+<p>CF710F String Set Queries<br>AC自动机+二进制分组。<br>详见博客题解。</p>
+<p>[国家集训队]拉拉队排练<br>回文自动机。<br>回文自动机上存一个$size$，然后把回文串拿出来按长度排序就没了。</p>
+<p>SP7586 NUMOFPAL - Number of Palindromes<br>回文自动机模板题不解释。</p>
+<p>CF245H Queries for Number of Palindromes<br>回文自动机。<br>固定左端点，枚举右端点，直接预处理出$[l,r]$的个数就好了。还有一种做法是区间DP，也很好写。</p>
+<p>CF17E Palisection<br>回文自动机。<br>相交不好搞，考虑不相交。先通过回文自动机求出总的回文串个数，然后$f[i]$表示到$i$的回文串个数，$g[i]$表示$i$到$n$的回文串个数，减掉不相交的贡献就好了。</p>
+<p>LG2245 星际导航/bzoj3732 Network<br>克鲁斯卡尔重构树。<br>建出重构树就没了。</p>
+<p>Wannafly挑战赛29 A御坂美琴<br>搜索。。。</p>
+<p>Wannafly挑战赛29 B白井黑子<br>瞎搞。<br>把一个数的2,3,5,7搞出来用hash维护一下就没了。</p>
+<p>Wannafly挑战赛29 C左方之地<br>待补。</p>
+<p>Wannafly挑战赛29 D风斩冰华<br>待补。</p>
+<p>Wannafly挑战赛29 E一方通行<br>待补。</p>
+<p>Wannafly挑战赛29 F最后之作<br>待补。</p>
+<p>LG4719 [模板]动态dp<br>动态DP模板题。</p>
+<p>[NOIP2018]保卫王国<br>动态DP。<br>$dp[i][0/1]$表示$i$这个点选或不选的最小价值和，然后直接动态DP板子就没了。</p>
+<p>bzoj4284 自古枪兵幸运E<br>生成函数。<br>见博客题解。</p>
+<p>[AH2017/HNOI2017]礼物<br>多项式乘法。<br>最终式子就是</p>
+<p>$\sum (x_i+m-y_i)^2=\sum x_i^2+\sum y_i^2+\sum m^2+2\ast m\ast \sum (x_i-y_i)-2 \sum (x_i\ast y_i)$</p>
+<p>然后就很好处理了，前面直接预处理，中间的是二次函数最值，枚举两个点就好了，最后的翻转$y_i$，发现是个卷积形式，直接倍长$x_i$，FFT一下就好了。</p>
+<p>LG4199 万径人踪灭<br>回文自动机+多项式乘法。<br>见博客题解。</p>
+<p>[模板]二逼平衡树<br>分块。<br>这道题的分块会在分块总结里专门讲的，这里就不提。</p>
+<p>bzoj4712 洪水<br>动态DP。<br>$f[i]$表示$i$号结点的子树与$i$号点切断的最小价值，然后待修改直接$ddp$，所以就没了。</p>
+<p>bzoj2894 世界线<br>后缀自动机。<br>边搜索这棵树边建后缀自动机，然后提问的两个操作都可以通过后缀自动机轻松搞出来。（主要为了白学才写的此题，我是骄傲的白学家！！！）</p>
+<p>[POI2007]ZAP-Queries<br>莫比乌斯反演。<br>最基本的莫比乌斯反演？？等有时间写一波莫比乌斯反演总结吧。</p>
+<p>[HAOI2011]Problem b<br>莫比乌斯反演。<br>与上面那题没区别。</p>
+<p>LG2257 YY的GCD<br>莫比乌斯反演。<br>式子中多一个枚举质数，其实本质上差不多吧，总结时会讲这道题的。</p>
+<p>[AHOI2005]约数研究<br>整除分块。<br>让你求的是$\sum_{i=1}^n \lfloor n/i \rfloor$，显然的整除分块就没了。</p>
+<p>[模板]杜教筛（Sum）<br>杜教筛模板不提。</p>
+<p>CF161D Distance in Tree<br>点分治。<br>见博客题解。</p>
+<p>[JSOI2008]Blue Mary开公司<br>李超线段树模板题不提。</p>
+<p>[HEOI2013]Segment<br>李超线段树。<br>注意一下这是线段是线段！！！其他和上题没区别，如果害怕被卡精度就可以像我一样直接用两个端点去计算。</p>
+<p>[bzoj1397]Ural 1486 Equal squares<br>hash。<br>二分答案，从二分值横向hash，再从二分值竖向hash，判断有没有两个hash值相同就可以了。不过这题的样例为什么没有$n$,$m$啊，数据里有哎。</p>
+<p>[BJOI2015]树的同构<br>树hash。<br>树hash判断树同构。用map存一下hash值就好了，不用map的话还可以做到$O(n^2)$。</p>
+<p>LG4949 最短距离<br>重链剖分。<br>这不是今年hdu多校的题吗？既然搬过来那我就把代码也搬过来了。拿走一条边，然后分两类讨论一下就没了。</p>
+<p>LG4948 数列求和<br>数论。<br>推个式子。结果式 $\sum_{i=1}^{n} (n^k\ast a^n)$。好像直接不知道怎么搞。感觉这就是一个等比数列的样子，那就用证明等比数列通项公式的办法证明这道题。<br>令$T(p)=\sum_{i=1}^{n} (n^p\ast a^n)$。<br>$(a-1)\ast T(p)=n^p\ast a^{n+1}-a+\sum_{i=2}^{n} ((i-1)^p-i^p)\ast a^i$<br>而$(i-1)^p-i^p=\sum_{j=0}^{p-1} C(p,j)\ast i^j\ast (-1)^{p-j}$<br>然后把这个带进去，再交换一下$\sum$的顺序，就会得到结果式为<br>$(a-1)\ast T(p)=n^p\ast a^{n+1}-a+\sum_{j=0}^{p-1} (-1)^{p-j}\ast C(p,j)\ast (\sum_{l=2}^{n} l^j*a^l)$<br>后面那个东西刚好是$T(j)-a$。所以递推$k$就好了。</p>
+<p>[国家集训队]Crash的数字表格 / JZPTAB<br>莫比乌斯反演。<br>比较傻的一题吧，式子一推导就会发现只要求出$\sum_{i} \sum_{j} gcd(i,j)$就没了，这条式子好像是基本式子吧。</p>
+<p>[SDOI2015]约数个数和<br>莫比乌斯反演。<br>总结时会讲这道题的。（插旗）</p>
+<p>[POI2012]OKR-A Horrible Poem<br>hash。<br>发现循环节的长度一定是区间长度的因数，那么我们就可以不断向前跳因数，然后$O(1)hash$判断循环节，这样就可以保证复杂度是$O(logn)$了。</p>
+<p>[NOI2016]区间<br>线段树。<br>没做过这么傻的NOI原题。离散化一下，取尺法再用线段树维护一下就没了。</p>
+<p>CF1012B Chemical table<br>并查集。<br>感觉有点用到了[bzoj4883]棋盘上的守卫的思想，把行和列分开来考虑，再用并查集维护一下就好了。</p>
+<p>[HAOI2010]计数<br>组合数学。<br>答案就是给出的数的每一位数的排列，那就从0开始枚举，组合数乘起来就好了。</p>
+<p>[JSOI2009]游戏<br>二分图博弈。<br>见博客题解。</p>
+<p>[NOI2011]兔兔与蛋蛋游戏<br>二分图博弈。<br>与上题基本一样，只不过这道题每一次都要改变二分图的形态，其实也没什么区别。</p>
+<p>[TJOI2018]数学计算<br>线段树。<br>用线段树维护一下时间轴就没了。</p>
+<p>[TJOI2018]智力竞赛<br>网络流。<br>先tarjan缩点，把图变成DAG。然后就是二分+最小链覆盖的傻子题了。</p>
+<p>[TJOI2018]游园会<br>DP套DP。<br>好像以前做到一道类似的，不过不想找了。DP套DP裸题吧，最长公共子序列的DP式先写出来，发现不好求未知的，那就差分一下DP数组，那就是二进制状压了。转移方程也很好写，这里就不提了。</p>
+<p>[TJOI2018]异或<br>Trie树。<br>TJ是不是特别喜欢考裸题，这题不是二合一吗，建两棵可持久化Trie树就没了啊。</p>
+<p>[TJOI2018]碱基序列<br>DP+KMP。<br>老实点，干嘛hash，老实KMP多好。还有这题可以滚掉一位数组。</p>
+<p>[TJOI2018]教科书般的亵渎<br>拉格朗日插值。<br>我觉得是不是题面描述非常不清啊，事实上答案一定是$\sum \sum_{i} i^{m+1}$，所以暴力插值就好了。</p>
+<p>SP104 HIGH - Highways<br>矩阵树定理模板题不提。</p>
+<p>[HEOI2015]小Z的房间<br>矩阵树定理模板题不提。</p>
+<p>SP3105/[TJOI2007]可爱的质数/[CQOI2018]破解D-H协议<br>exbsgs模板题不提。</p>
+<p>[CQOI2018]社交网络<br>矩阵树定理模板题不提。</p>
+<p>AtCoder Grand Contest 029<br>比赛。<br>开场迟了，五分钟才写掉A，而且还忘记开long long罚了一次。然后B考虑了好久才会写，写了C后被迫去睡觉了。<br>打ACM赛制我果然不习惯，题解以后再说。</p>
+<p>[CQOI2018]交错序列<br>矩阵快速幂。<br>最终式子是$\sum x^a*y^b$。把$x$用$n-y$带掉，然后暴力二项式展开，发现这个式子可以用$dp$去求，然后发现$dp$可以矩阵快速幂优化一下，<del>接着就没了</del>。然后一交你会发现自己只有40分，看了题解才会知道这题卡常。矩乘那里的取模事实上只用取一次，因为模数很小，然后就轻松过了此题。</p>
+<p>[CQOI2018]九连环<br>高精度乘法。<br>打表找规律，python出奇迹。</p>
+<p>洛谷lk,remoon,dkw的水题欢乐赛(<em>/ω＼</em>)<br>比赛。<br>因为被迫去吃饭+晚自修，写的时候大幅度减少，最后被吊打。</p>
+<p>LG5104 红包发红包<br>规律。<br>打表找规律就没了。</p>
+<p>LG5105 不强制在线的动态快速排序<br>平衡树。<br><del>忘开long long调一年</del>首先要知道$\sum_{i=1}^{n} ⨁ 2*i+1$（公式不用打，将就着看吧），这条式子可以先把$1$提出来，再把$2$提出来，然后个位数就是$n$的奇偶性，其它位数就是$\sum_{i=1}^{n} ⨁ i$，这个可以膜$4$处理，然后就搞定了。至于区间这东西可以平衡树搞一下（好像正常人都写$set$，就我写$fhq treap$。)</p>
+<p>LG5106 dkw的lcm<br>积性函数。<br>欧拉函数是一个积性函数，$lcm$又只跟质数有关，那就考虑质数的贡献就能做了。每个质数的贡献是$phi(p^i)$（$p$为质数)，然后最后乘起来就好了。</p>
+<p>LG5107 能量采集<br>矩阵快速幂。<br>详见博客题解。</p>
+<p>LG5108 仰望半月的夜空<br>待补。</p>
+<p>LG5109 归程<br>待补。</p>
+<p>[模板]快速沃尔什变换<br>FWT模板题不提。</p>
+<p>[CQOI2018]异或序列<br>莫队。<br>存一下出现的连续异或和的个数就好了。</p>
+<p>[NOI2009]变换序列<br>二分图匹配。<br>每个点分别向可以得到的两个点连边，然后将边的顺序排一下序，最后从后往前贪心地跑匈牙利就可以了，</p>
+<p>[APIO2015]八邻旁之桥<br>平衡树。$k=1$就是求个中位数，$k=2$就是枚举断点求中位数。$fhqtreap$被线段树在速度上吊打了。</p>
+<p>[SCOI2010]传送带<br>三分。<br>显然可以证明结果是个凸函数。然后分别两个线段上三分答案就可以了。</p>
+<p>LG4389 付公主的背包<br>多项式乘法。<br>生成函数搞出背包后，然后求个$ln$，就可以$nlogn$（调和级数）的时间求出多项式，再$exp$回去就好了。</p>
+<p>[HEOI2016/TJOI2016]排序<br>线段树。<br>考虑二分答案，然后利用[CQOI2009]中位数的思想，小于的看做0，大于等于看做1，线段树维护一下就没了？！时间复杂度$O(n\ast log^2n)$。然而事实上有一种更好写也更快的线段树合并和分裂的做法，时间复杂度是$O(n\ast logn)$。</p>
+<p><del>可能这篇就暂时结束了，接下来主要去做集训队作业了，所以开个专门的文章。</del></p>
+<p>居然还在更新，真实。</p>
+<p>最值反演的三道题，尽在博客最值反演总结。</p>
+<p>CF888E Maximum Subsequence<br>meet in the middle。<br>前一半暴力搜索，后一半暴力搜索。然后排序去重。两个数组里的数加起来若小于$m$，则肯定取最大。若加起来大于$m$，由于加起来不可能超过$2*m$，所以肯定是最大的两个数加起来。于是就没了。</p>
+<p>[SCOI2016]幸运数字<br>线性基。<br>傻子题？没有任何思维含量？</p>
+<p>[国家集训队] Crash 的文明世界<br>第二类斯特林数。<br>用第二类斯特林数关于$a^n$的式子套一下，然后一个二次扫描换根DP就没了。</p>
+<p>CF932E Team Work<br>第二类斯特林数。<br>推导一下式子，想办法在$\sum$的$n$搞掉，然后发现真的可以搞掉，然后预处理第二类斯特林数就没了。</p>
+<p>LG3765 总统选举<br>平衡树+线段树。<br>首先要会处理众数的方式，其实也很简单。稍微解释一下。比如说定义一个$sum$为0，$las$为上一个数，若新进来的数不等于$las$，则$sum—$。若$sum==0$，则$las$赋值为0，否则$las$不变。这样下去，$las$就是众数了。这题就用这个思想，用线段树去维护区间的众数。但这题要求的是大于区间长度除以2，所以平衡树维护一下区间个数就好了。<br>突然想秀一下自己好看的code：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//2018.12.30 by ljz</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> res register int</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LL long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> inf 0x3f3f3f3f</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> eps 1e-15</span></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    res s=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">bool</span> w=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">char</span> ch=<span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">while</span>(ch&lt;<span class="string">&#x27;0&#x27;</span>||ch&gt;<span class="string">&#x27;9&#x27;</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span>(ch==<span class="string">&#x27;-&#x27;</span>)w=<span class="number">1</span>;</span><br><span class="line">        ch=<span class="built_in">getchar</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(ch&gt;=<span class="string">&#x27;0&#x27;</span>&amp;&amp;ch&lt;=<span class="string">&#x27;9&#x27;</span>)s=s*<span class="number">10</span>+ch-<span class="string">&#x27;0&#x27;</span>,ch=<span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">return</span> w?-s:s;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">inline</span> <span class="keyword">void</span> _swap(res &amp;x,res &amp;y) &#123;</span><br><span class="line">    x^=y^=x^=y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">inline</span> <span class="keyword">int</span> _abs(<span class="keyword">const</span> res &amp;x) &#123;</span><br><span class="line">    <span class="keyword">return</span> x&gt;<span class="number">0</span>?x:-x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">inline</span> <span class="keyword">int</span> _max(<span class="keyword">const</span> res &amp;x,<span class="keyword">const</span> res &amp;y) &#123;</span><br><span class="line">    <span class="keyword">return</span> x&gt;y?x:y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">inline</span> <span class="keyword">int</span> _min(<span class="keyword">const</span> res &amp;x,<span class="keyword">const</span> res &amp;y) &#123;</span><br><span class="line">    <span class="keyword">return</span> x&lt;y?x:y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">5e5</span>+<span class="number">10</span>;</span><br><span class="line"><span class="keyword">namespace</span> MAIN &#123;</span><br><span class="line">    <span class="keyword">int</span> n,m;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Treap</span>&#123;</span></span><br><span class="line">        <span class="keyword">int</span> son[<span class="number">2</span>],siz,pri,val,col;</span><br><span class="line">        <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">            son[<span class="number">0</span>]=son[<span class="number">1</span>]=siz=pri=val=col=<span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;tr[N];</span><br><span class="line">    <span class="keyword">int</span> st[N],top;</span><br><span class="line">    <span class="keyword">int</span> tot,rt[N];</span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">pushup</span><span class="params">(<span class="keyword">const</span> res &amp;rt)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!rt)<span class="keyword">return</span>;</span><br><span class="line">        tr[rt].siz=tr[tr[rt].son[<span class="number">0</span>]].siz+tr[tr[rt].son[<span class="number">1</span>]].siz+<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">newnode</span><span class="params">(<span class="keyword">const</span> res &amp;va,<span class="keyword">const</span> res &amp;col)</span></span>&#123;</span><br><span class="line">        res cnt;</span><br><span class="line">        <span class="keyword">if</span>(top)cnt=st[top--];</span><br><span class="line">        <span class="keyword">else</span> cnt=++tot;</span><br><span class="line">        tr[cnt].son[<span class="number">0</span>]=tr[cnt].son[<span class="number">1</span>]=<span class="number">0</span>,tr[cnt].siz=<span class="number">1</span>,tr[cnt].col=col,tr[cnt].val=va,tr[cnt].pri=<span class="built_in">rand</span>();</span><br><span class="line">        <span class="keyword">return</span> cnt;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">merge</span><span class="params">(<span class="keyword">const</span> res &amp;x,<span class="keyword">const</span> res &amp;y)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!x||!y)<span class="keyword">return</span> x+y;</span><br><span class="line">        <span class="keyword">if</span>(tr[x].pri&lt;tr[y].pri)&#123;</span><br><span class="line">            tr[x].son[<span class="number">1</span>]=<span class="built_in">merge</span>(tr[x].son[<span class="number">1</span>],y);</span><br><span class="line">            <span class="built_in">pushup</span>(x);</span><br><span class="line">            <span class="keyword">return</span> x;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            tr[y].son[<span class="number">0</span>]=<span class="built_in">merge</span>(x,tr[y].son[<span class="number">0</span>]);</span><br><span class="line">            <span class="built_in">pushup</span>(y);</span><br><span class="line">            <span class="keyword">return</span> y;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">splitv</span><span class="params">(res now,res k,res &amp;x,res &amp;y)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!now)&#123;x=y=<span class="number">0</span>;<span class="keyword">return</span>;&#125;</span><br><span class="line">        <span class="keyword">if</span>(tr[now].val&lt;=k)x=now,<span class="built_in">splitv</span>(tr[now].son[<span class="number">1</span>],k,tr[now].son[<span class="number">1</span>],y);</span><br><span class="line">        <span class="keyword">else</span> y=now,<span class="built_in">splitv</span>(tr[now].son[<span class="number">0</span>],k,x,tr[now].son[<span class="number">0</span>]);</span><br><span class="line">        <span class="built_in">pushup</span>(now);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">const</span> res &amp;col,<span class="keyword">const</span> res &amp;val)</span></span>&#123;</span><br><span class="line">        res a,b;</span><br><span class="line">        <span class="built_in">splitv</span>(rt[col],val,a,b),rt[col]=<span class="built_in">merge</span>(<span class="built_in">merge</span>(a,<span class="built_in">newnode</span>(val,col)),b);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">del</span><span class="params">(<span class="keyword">const</span> res &amp;col,<span class="keyword">const</span> res &amp;val)</span></span>&#123;</span><br><span class="line">        res a,b,c,d;</span><br><span class="line">        <span class="built_in">splitv</span>(rt[col],val,a,b),<span class="built_in">splitv</span>(a,val<span class="number">-1</span>,c,d),st[++top]=d,a=c,rt[col]=<span class="built_in">merge</span>(a,b);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">check</span><span class="params">(<span class="keyword">const</span> res &amp;col,<span class="keyword">const</span> res &amp;l,<span class="keyword">const</span> res &amp;r)</span></span>&#123;</span><br><span class="line">        res a,b,c,d;</span><br><span class="line">        <span class="keyword">bool</span> flag=<span class="number">0</span>;</span><br><span class="line">        <span class="built_in">splitv</span>(rt[col],l<span class="number">-1</span>,a,b),<span class="built_in">splitv</span>(b,r,c,d);</span><br><span class="line">        <span class="keyword">if</span>(tr[c].siz&gt;(r-l+<span class="number">1</span>)/<span class="number">2</span>)flag=<span class="number">1</span>;</span><br><span class="line">        rt[col]=<span class="built_in">merge</span>(a,<span class="built_in">merge</span>(c,d));</span><br><span class="line">        <span class="keyword">return</span> flag;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> Col[N];</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">P</span>&#123;</span></span><br><span class="line">        <span class="keyword">int</span> cnt,mode;</span><br><span class="line">        <span class="built_in">P</span>() &#123;&#125;</span><br><span class="line">        <span class="built_in">P</span>(res cnt,res mode):<span class="built_in">cnt</span>(cnt),<span class="built_in">mode</span>(mode) &#123;&#125;</span><br><span class="line">    &#125;T[N&lt;&lt;<span class="number">2</span>];</span><br><span class="line">    <span class="keyword">inline</span> P <span class="keyword">operator</span> + (<span class="keyword">const</span> P &amp;x,<span class="keyword">const</span> P &amp;y)&#123;</span><br><span class="line">        <span class="keyword">if</span>(x.mode==y.mode)<span class="keyword">return</span> <span class="built_in">P</span>(x.cnt+y.cnt,x.mode);</span><br><span class="line">        <span class="keyword">if</span>(x.cnt&gt;=y.cnt)<span class="keyword">return</span> <span class="built_in">P</span>(x.cnt-y.cnt,x.mode);</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">P</span>(y.cnt-x.cnt,y.mode);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">build</span><span class="params">(<span class="keyword">const</span> res &amp;rt,<span class="keyword">const</span> res &amp;l,<span class="keyword">const</span> res &amp;r)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(l==r)&#123;T[rt]=<span class="built_in">P</span>(<span class="number">1</span>,Col[l]=<span class="built_in">read</span>());<span class="keyword">return</span>;&#125;</span><br><span class="line">        res mid=(l+r)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">        <span class="built_in">build</span>(rt&lt;&lt;<span class="number">1</span>,l,mid),<span class="built_in">build</span>(rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>,mid+<span class="number">1</span>,r);</span><br><span class="line">        T[rt]=T[rt&lt;&lt;<span class="number">1</span>]+T[rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function">P <span class="title">query</span><span class="params">(<span class="keyword">const</span> res &amp;rt,<span class="keyword">const</span> res &amp;l,<span class="keyword">const</span> res &amp;r,<span class="keyword">const</span> res &amp;L,<span class="keyword">const</span> res &amp;R)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(L&lt;=l&amp;&amp;r&lt;=R)<span class="keyword">return</span> T[rt];</span><br><span class="line">        res mid=(l+r)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(L&lt;=mid&amp;&amp;R&gt;mid)<span class="keyword">return</span> <span class="built_in">query</span>(rt&lt;&lt;<span class="number">1</span>,l,mid,L,R)+<span class="built_in">query</span>(rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>,mid+<span class="number">1</span>,r,L,R);</span><br><span class="line">        <span class="keyword">if</span>(L&lt;=mid)<span class="keyword">return</span> <span class="built_in">query</span>(rt&lt;&lt;<span class="number">1</span>,l,mid,L,R);</span><br><span class="line">        <span class="keyword">if</span>(R&gt;mid)<span class="keyword">return</span> <span class="built_in">query</span>(rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>,mid+<span class="number">1</span>,r,L,R);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">modify</span><span class="params">(<span class="keyword">const</span> res &amp;rt,<span class="keyword">const</span> res &amp;l,<span class="keyword">const</span> res &amp;r,<span class="keyword">const</span> res &amp;p,<span class="keyword">const</span> res &amp;va)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(l==r)&#123;T[rt].mode=va;<span class="keyword">return</span>;&#125;</span><br><span class="line">        res mid=(l+r)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(p&lt;=mid)<span class="built_in">modify</span>(rt&lt;&lt;<span class="number">1</span>,l,mid,p,va);</span><br><span class="line">        <span class="keyword">else</span> <span class="built_in">modify</span>(rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>,mid+<span class="number">1</span>,r,p,va);</span><br><span class="line">        T[rt]=T[rt&lt;&lt;<span class="number">1</span>]+T[rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">MAIN</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        n=<span class="built_in">read</span>(),m=<span class="built_in">read</span>();</span><br><span class="line">        <span class="built_in">build</span>(<span class="number">1</span>,<span class="number">1</span>,n);</span><br><span class="line">        <span class="keyword">for</span>(res i=<span class="number">1</span>;i&lt;=n;i++)<span class="built_in">insert</span>(Col[i],i);</span><br><span class="line">        <span class="keyword">while</span>(m--)&#123;</span><br><span class="line"><span class="comment">//          for(res i=1;i&lt;=n;i++)printf(&quot;%d\n&quot;,Col[i]);</span></span><br><span class="line">            res l=<span class="built_in">read</span>(),r=<span class="built_in">read</span>(),s=<span class="built_in">read</span>(),k=<span class="built_in">read</span>(),len=r-l+<span class="number">1</span>,S;</span><br><span class="line">            P ret=<span class="built_in">query</span>(<span class="number">1</span>,<span class="number">1</span>,n,l,r);</span><br><span class="line">            <span class="keyword">if</span>(ret.cnt&gt;len/<span class="number">2</span>||<span class="built_in">check</span>(ret.mode,l,r))S=ret.mode;</span><br><span class="line">            <span class="keyword">else</span> S=s;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,S);</span><br><span class="line">            <span class="keyword">for</span>(res i=<span class="number">1</span>;i&lt;=k;i++)&#123;</span><br><span class="line">                res x=<span class="built_in">read</span>();</span><br><span class="line">                <span class="built_in">modify</span>(<span class="number">1</span>,<span class="number">1</span>,n,x,S),<span class="built_in">del</span>(Col[x],x),<span class="built_in">insert</span>(S,x),Col[x]=S;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        P ret=<span class="built_in">query</span>(<span class="number">1</span>,<span class="number">1</span>,n,<span class="number">1</span>,n);</span><br><span class="line">        <span class="keyword">if</span>(ret.cnt&gt;n/<span class="number">2</span>||<span class="built_in">check</span>(ret.mode,<span class="number">1</span>,n))<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,ret.mode);</span><br><span class="line">        <span class="keyword">else</span> <span class="built_in">puts</span>(<span class="string">&quot;-1&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">srand</span>((<span class="keyword">unsigned</span>)<span class="built_in">time</span>(<span class="literal">NULL</span>));</span><br><span class="line">    MAIN::<span class="built_in">MAIN</span>();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>CF487E Tourists<br>圆方树。<br>圆方树裸题，套个可删除堆和树链剖分就好了。</p>
+<p>[APIO2018] Duathlon 铁人两项<br>圆方树。<br>建出圆方树，DP一下就好了。</p>
+<p>[CQOI2006]凸多边形<br>半平面交模板题不提。</p>
+<p>[USACO5.1]圈奶牛Fencing the Cows<br>二维凸包模板题不提。</p>
+<p>博客似乎咕太久了，继续更新一波。</p>
+<p>CF1045A Last chance<br>区间建边+网络流。<br>按照题意做好像就好了。</p>
+<p>CF850E Random Elections<br>FWT。<br>读懂题意后就会发现是一个01数组和自己做异或卷积，于是FWT维护一下就可以了。</p>
+<p>[NOIP2018]摆渡车<br>斜率优化。<br>普及组的题，调了半个小时发现自己$n$和$m$读入反了，尴尬的一批。考虑一个DP，然后发现可以斜率优化，于是$O(T)$的复杂度就过了。（据说有$O(n\ast m)$的做法，不过我没想。</p>
+<p>[JLOI2013]赛车<br>单调栈。<br>拿到题目，画了下图，准备李超线段树。结果发现1e9的数据，马上想起了某道做过的题，于是单调栈维护一下就好了。不过注意一下这里是从0开始的，且要小心一样的赛车。</p>
+<p>[SDOI2017]树点涂色<br>LCT。<br>首先一看就是数据结构。然后想了一下觉得可以维护一个结点到根的不同颜色段。开始想的是树剖+线段树打个标记的做法，后来发现操作1只有一个结点到根的情况，于是考虑到access一下就好了。复杂度$O(n\ast log^2n)$。</p>
+<p>[POI2012]SZA-Cloakroom<br>背包。<br>开始想到以$a$排序，然后$dp[i][j]$表示前$i$个元素背包容量为$j$的最小的$b$的最大值。然后每次询问二分一下$i$的位置就好了。接着发现被卡空间了。那就离线一下，把询问也按$a$排序。每次把满足条件的$a$插入背包中，最多插入$n$次，复杂度还是一样的。</p>
+<p>[BJWC2018]词韵<br>Trie树+动态规划。<br>考虑建出反串Trie树后，怎么DP。对于一种情况，情况中的点必须是结束点。然后这个点可以向它是结束点的儿子/父亲/兄弟跳一步。儿子对父亲显然，那么就考虑一下父亲对儿子的贡献就可以了。至于兄弟，可以两个兄弟拿出来合并一下。</p>
+<p>CF123D String<br>后缀数组。<br>其实求的就是所有后缀之间的lcp之和，所以对于每一个后缀维护一个单调栈就可以了。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">foreverlasting</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://foreverlasting1202.github.io/2019/02/17/2019%E7%9C%81%E9%80%89%E5%89%8D%E7%9A%84%E5%81%9A%E9%A2%98%E8%AE%B0%E5%BD%95/">http://foreverlasting1202.github.io/2019/02/17/2019省选前的做题记录/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/OI/">OI</a></div><div class="post_share"><div class="social-share" data-image="https://pic.imgdb.cn/item/61fa02dd2ab3f51d91b61b4a.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2019/02/20/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%BA%9B%E5%A5%87%E6%80%AA%E7%9A%84%E5%BC%8F%E5%AD%90/"><img class="prev-cover" src="https://pic.imgdb.cn/item/61fa051f2ab3f51d91b7eded.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">记录一些奇怪的式子</div></div></a></div><div class="next-post pull-right"><a href="/2019/02/03/SDWC2018%20Day1%E7%BD%91%E6%A0%BC/"><img class="next-cover" src="https://pic.imgdb.cn/item/61fa03cf2ab3f51d91b6df0b.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">【SDWC2018 Day1】网格</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2022/02/28/bijectivepr/" title="a few solutions of bijective proof problems"><img class="cover" src="https://pic.imgdb.cn/item/61fa03b12ab3f51d91b6c483.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-28</div><div class="title">a few solutions of bijective proof problems</div></div></a></div><div><a href="/2022/02/05/loj%E9%9A%8F%E6%9C%BA%E5%81%9A%E9%A2%98/" title="loj 随机做题"><img class="cover" src="https://pic.imgdb.cn/item/61fa051f2ab3f51d91b7ee03.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-05</div><div class="title">loj 随机做题</div></div></a></div><div><a href="/2021/10/18/%E5%81%9A%E9%A2%98%E8%AE%B0%E5%BD%95/" title="做题记录"><img class="cover" src="https://s2.loli.net/2022/02/01/ZGLrd376Kyx9wvE.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-10-18</div><div class="title">做题记录</div></div></a></div><div><a href="/2021/08/10/%E5%8F%A3%E8%83%A1%E8%AE%B0%E5%BD%95/" title="口胡记录"><img class="cover" src="https://pic.imgdb.cn/item/61fa039f2ab3f51d91b6b75b.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-08-10</div><div class="title">口胡记录</div></div></a></div><div><a href="/2021/07/06/%E8%AE%AD%E7%BB%83%E5%AE%9E%E5%BD%95/" title="训练实录"><img class="cover" src="https://s2.loli.net/2022/02/01/2WZRAST8qgLz6Ey.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-07-06</div><div class="title">训练实录</div></div></a></div><div><a href="/2021/06/13/%E5%A4%8D%E5%81%A5%E8%AE%AD%E7%BB%83/" title="复 健 训 练"><img class="cover" src="https://s2.loli.net/2022/02/01/ZGLrd376Kyx9wvE.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-06-13</div><div class="title">复 健 训 练</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/cute.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">foreverlasting</div><div class="author-info__description">呜呜呜。</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">134</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">3</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">40</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/foreverlasting1202" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="/573902690@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">现在装了个大概，还有 tag、link 之类的东西没整好，同时文章部分预览也没完成，以后慢慢整吧。</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/9102/01/01/%E8%BF%91%E6%9C%9F%E6%9B%B4%E6%96%B0%E7%9A%84%E5%8D%9A%E5%AE%A2/" title="近期更新的博客"><img src="https://pic.imgdb.cn/item/61fa03602ab3f51d91b685c4.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="近期更新的博客"/></a><div class="content"><a class="title" href="/9102/01/01/%E8%BF%91%E6%9C%9F%E6%9B%B4%E6%96%B0%E7%9A%84%E5%8D%9A%E5%AE%A2/" title="近期更新的博客">近期更新的博客</a><time datetime="9102-01-01T13:50:00.000Z" title="Created 9102-01-01 21:50:00">9102-01-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/28/bijectivepr/" title="a few solutions of bijective proof problems"><img src="https://pic.imgdb.cn/item/61fa03b12ab3f51d91b6c483.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="a few solutions of bijective proof problems"/></a><div class="content"><a class="title" href="/2022/02/28/bijectivepr/" title="a few solutions of bijective proof problems">a few solutions of bijective proof problems</a><time datetime="2022-02-28T15:30:00.000Z" title="Created 2022-02-28 23:30:00">2022-02-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/27/%E6%97%A0%E5%81%8F%E4%BC%B0%E8%AE%A1%E7%9A%84%E7%94%B1%E6%9D%A5/" title="无偏估计的由来"><img src="https://pic.imgdb.cn/item/61fa041f2ab3f51d91b72144.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无偏估计的由来"/></a><div class="content"><a class="title" href="/2022/02/27/%E6%97%A0%E5%81%8F%E4%BC%B0%E8%AE%A1%E7%9A%84%E7%94%B1%E6%9D%A5/" title="无偏估计的由来">无偏估计的由来</a><time datetime="2022-02-27T15:30:00.000Z" title="Created 2022-02-27 23:30:00">2022-02-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/22/CF1644/" title="CF1644"><img src="https://pic.imgdb.cn/item/61fa04662ab3f51d91b75d86.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CF1644"/></a><div class="content"><a class="title" href="/2022/02/22/CF1644/" title="CF1644">CF1644</a><time datetime="2022-02-22T15:30:00.000Z" title="Created 2022-02-22 23:30:00">2022-02-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/02/05/loj%E9%9A%8F%E6%9C%BA%E5%81%9A%E9%A2%98/" title="loj 随机做题"><img src="https://pic.imgdb.cn/item/61fa051f2ab3f51d91b7ee03.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="loj 随机做题"/></a><div class="content"><a class="title" href="/2022/02/05/loj%E9%9A%8F%E6%9C%BA%E5%81%9A%E9%A2%98/" title="loj 随机做题">loj 随机做题</a><time datetime="2022-02-05T15:30:00.000Z" title="Created 2022-02-05 23:30:00">2022-02-05</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 By foreverlasting</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Local search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.2
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
+            const target = node.parentNode
+            if (target.nodeName.toLowerCase() === 'li') {
+              target.parentNode.classList.add('has-jax')
+            } else {
+              target.classList.add('has-jax')
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'vBIv3E8Y4e1znLKVs85Y0uSh-gzGzoHsz',
+      appKey: 'Dpqs6OR87Ev6XoG6XcSPjToh',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
